@@ -1,0 +1,9 @@
+C:\Users\aallanrd\Documents\Visual Studio 2013\Projects\App\Servicio\obj\Debug\Servicio.csprojResolveAssemblyReference.cache
+C:\Users\aallanrd\Documents\Visual Studio 2013\Projects\App\Servicio\bin\Debug\Servicio.dll
+C:\Users\aallanrd\Documents\Visual Studio 2013\Projects\App\Servicio\bin\Debug\Servicio.pdb
+C:\Users\aallanrd\Documents\Visual Studio 2013\Projects\App\Servicio\bin\Debug\Modelo.dll
+C:\Users\aallanrd\Documents\Visual Studio 2013\Projects\App\Servicio\bin\Debug\Repositorio.dll
+C:\Users\aallanrd\Documents\Visual Studio 2013\Projects\App\Servicio\bin\Debug\Modelo.pdb
+C:\Users\aallanrd\Documents\Visual Studio 2013\Projects\App\Servicio\bin\Debug\Repositorio.pdb
+C:\Users\aallanrd\Documents\Visual Studio 2013\Projects\App\Servicio\obj\Debug\Servicio.dll
+C:\Users\aallanrd\Documents\Visual Studio 2013\Projects\App\Servicio\obj\Debug\Servicio.pdb

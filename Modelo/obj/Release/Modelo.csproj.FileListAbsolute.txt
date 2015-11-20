@@ -1,0 +1,5 @@
+c:\Users\aallanrd\documents\visual studio 2013\Projects\App\Modelo\bin\Release\Modelo.dll
+c:\Users\aallanrd\documents\visual studio 2013\Projects\App\Modelo\bin\Release\Modelo.pdb
+c:\Users\aallanrd\documents\visual studio 2013\Projects\App\Modelo\obj\Release\Modelo.dll
+c:\Users\aallanrd\documents\visual studio 2013\Projects\App\Modelo\obj\Release\Modelo.pdb
+C:\Users\aallanrd\Documents\Visual Studio 2013\Projects\App\Modelo\obj\Release\Modelo.csprojResolveAssemblyReference.cache

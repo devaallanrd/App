@@ -1,0 +1,7 @@
+C:\Users\aallanrd\Documents\Visual Studio 2013\Projects\App\Presentacion\bin\Debug\Presentacion.dll
+C:\Users\aallanrd\Documents\Visual Studio 2013\Projects\App\Presentacion\bin\Debug\Presentacion.pdb
+C:\Users\aallanrd\Documents\Visual Studio 2013\Projects\App\Presentacion\bin\Debug\Modelo.dll
+C:\Users\aallanrd\Documents\Visual Studio 2013\Projects\App\Presentacion\bin\Debug\Modelo.pdb
+C:\Users\aallanrd\Documents\Visual Studio 2013\Projects\App\Presentacion\obj\Debug\Presentacion.csprojResolveAssemblyReference.cache
+C:\Users\aallanrd\Documents\Visual Studio 2013\Projects\App\Presentacion\obj\Debug\Presentacion.dll
+C:\Users\aallanrd\Documents\Visual Studio 2013\Projects\App\Presentacion\obj\Debug\Presentacion.pdb

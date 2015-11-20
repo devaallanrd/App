@@ -1,0 +1,8 @@
+C:\Users\aallanrd\Documents\Visual Studio 2013\Projects\App\Repositorio\bin\Debug\Repositorio.dll.config
+C:\Users\aallanrd\Documents\Visual Studio 2013\Projects\App\Repositorio\bin\Debug\Repositorio.dll
+C:\Users\aallanrd\Documents\Visual Studio 2013\Projects\App\Repositorio\bin\Debug\Repositorio.pdb
+C:\Users\aallanrd\Documents\Visual Studio 2013\Projects\App\Repositorio\bin\Debug\Modelo.dll
+C:\Users\aallanrd\Documents\Visual Studio 2013\Projects\App\Repositorio\bin\Debug\Modelo.pdb
+C:\Users\aallanrd\Documents\Visual Studio 2013\Projects\App\Repositorio\obj\Debug\Repositorio.csprojResolveAssemblyReference.cache
+C:\Users\aallanrd\Documents\Visual Studio 2013\Projects\App\Repositorio\obj\Debug\Repositorio.dll
+C:\Users\aallanrd\Documents\Visual Studio 2013\Projects\App\Repositorio\obj\Debug\Repositorio.pdb

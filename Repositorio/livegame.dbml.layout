@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11.375, 8.5" name="livegame">
+  <DataContextMoniker Name="/livegameDataContext" />
+  <nestedChildShapes>
+    <classShape Id="d3826b97-cb61-49a0-81d3-7986f72cf1ca" absoluteBounds="3.875, 0.5, 2, 1.9631982421875">
+      <DataClassMoniker Name="/livegameDataContext/Usuario" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2c74c2c6-3c23-46a3-8788-508a9bda090c" absoluteBounds="3.8899999999999997, 0.96, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9acd2302-d492-4b2a-b02a-24f051490941" absoluteBounds="3, 4.125, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/livegameDataContext/Jugadores" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0738327e-eac6-4964-af4d-afbfab37556c" absoluteBounds="3.015, 4.585, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4c73bbae-294e-464a-8a3d-9d27c2c6acd5" absoluteBounds="6.125, 3.625, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/livegameDataContext/Equipo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6b403f8f-7906-4105-8e64-99a243d93d8d" absoluteBounds="6.14, 4.085, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(6.125 : 6.1413423962274); (5 : 6.1413423962274)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/livegameDataContext/Equipo/Equipo_Jugadores" />
+      <nodes>
+        <classShapeMoniker Id="4c73bbae-294e-464a-8a3d-9d27c2c6acd5" />
+        <classShapeMoniker Id="9acd2302-d492-4b2a-b02a-24f051490941" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="a401b55d-6ac0-48cb-ba78-55713b58cd2e" absoluteBounds="0.625, 2, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/livegameDataContext/Estadistica" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2896ecec-32ec-4bbf-bd25-b30543cb8b4e" absoluteBounds="0.63999999999999968, 2.46, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(6.125 : 5.30028082110063); (5.625 : 5.30028082110063); (5.625 : 3.30028082110063); (5.45833333333333 : 3.30028082110063 : JumpStart); (5.29166666666667 : 3.30028082110063 : JumpEnd); (2.625 : 3.30028082110063)]" manuallyRouted="true" fixedFrom="Caller" fixedTo="Algorithm">
+      <AssociationMoniker Name="/livegameDataContext/Equipo/Equipo_Estadistica" />
+      <nodes>
+        <classShapeMoniker Id="4c73bbae-294e-464a-8a3d-9d27c2c6acd5" />
+        <classShapeMoniker Id="a401b55d-6ac0-48cb-ba78-55713b58cd2e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5 : 5.39411244112748); (5.375 : 5.39411244112748); (5.375 : 2.85048803164406); (2.625 : 2.85048803164406)]" fixedFrom="Caller" fixedTo="Algorithm">
+      <AssociationMoniker Name="/livegameDataContext/Jugadores/Jugadores_Estadistica" />
+      <nodes>
+        <classShapeMoniker Id="9acd2302-d492-4b2a-b02a-24f051490941" />
+        <classShapeMoniker Id="a401b55d-6ac0-48cb-ba78-55713b58cd2e" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="c80c0121-c608-4f99-9105-c50ec74e09a4" absoluteBounds="6.875, 0.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/livegameDataContext/Narracione" />
+      <nestedChildShapes>
+        <elementListCompartment Id="dd4ee491-9e8a-42c7-a29a-9913417a7cc4" absoluteBounds="6.8900000000000006, 1.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.875 : 1.53929768880208); (6.875 : 1.53929768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/livegameDataContext/Usuario/Usuario_Narracione" />
+      <nodes>
+        <classShapeMoniker Id="d3826b97-cb61-49a0-81d3-7986f72cf1ca" />
+        <classShapeMoniker Id="c80c0121-c608-4f99-9105-c50ec74e09a4" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="1604d523-8d83-43b6-9395-77fadfc43a0c" absoluteBounds="9.125, 3.125, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/livegameDataContext/Calendario" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c6394aa1-0816-43aa-9fa3-cfa82ca43efb" absoluteBounds="9.14, 3.585, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(10.125 : 3.125); (10.125 : 1.53929768880208); (8.875 : 1.53929768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/livegameDataContext/Calendario/Calendario_Narracione" />
+      <nodes>
+        <classShapeMoniker Id="1604d523-8d83-43b6-9395-77fadfc43a0c" />
+        <classShapeMoniker Id="c80c0121-c608-4f99-9105-c50ec74e09a4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.125 : 4.74120198567708); (9.125 : 4.74120198567708)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/livegameDataContext/Equipo/Equipo_Calendario" />
+      <nodes>
+        <classShapeMoniker Id="4c73bbae-294e-464a-8a3d-9d27c2c6acd5" />
+        <classShapeMoniker Id="1604d523-8d83-43b6-9395-77fadfc43a0c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.125 : 4.12060099283854); (9.125 : 4.12060099283854)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/livegameDataContext/Equipo/Equipo_Calendario1" />
+      <nodes>
+        <classShapeMoniker Id="4c73bbae-294e-464a-8a3d-9d27c2c6acd5" />
+        <classShapeMoniker Id="1604d523-8d83-43b6-9395-77fadfc43a0c" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

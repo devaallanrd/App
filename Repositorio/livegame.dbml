@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="livegame" Class="livegameDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=ALLAN;Initial Catalog=livegame;Integrated Security=True" SettingsObjectName="Repositorio.Properties.Settings" SettingsPropertyName="livegameConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Usuarios" Member="Usuarios">
+    <Type Name="Usuario">
+      <Column Name="nombre_usuario" Type="System.String" DbType="VarChar(25) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tipo" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="contraseña" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="correo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="nombre" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Association Name="Usuario_Narracione" Member="Narraciones" ThisKey="nombre_usuario" OtherKey="admin" Type="Narracione" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Jugadores" Member="Jugadores">
+    <Type Name="Jugadores">
+      <Column Name="id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="nombre" Type="System.String" DbType="VarChar(24) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="dorsal" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="equipo" Type="System.String" DbType="VarChar(9)" CanBeNull="true" />
+      <Column Name="pos" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="edad" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="salario" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="twitter" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="tfollows" Type="System.Decimal" DbType="Decimal(11,3)" CanBeNull="true" />
+      <Column Name="activo" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Association Name="Jugadores_Estadistica" Member="Estadisticas" ThisKey="nombre" OtherKey="jugador" Type="Estadistica" />
+      <Association Name="Equipo_Jugadores" Member="Equipo1" ThisKey="equipo" OtherKey="ht" Type="Equipo" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Equipos" Member="Equipos">
+    <Type Name="Equipo">
+      <Column Name="ht" Type="System.String" DbType="VarChar(9) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nombre" Type="System.String" DbType="VarChar(22)" CanBeNull="true" />
+      <Column Name="twitter" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="ref" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="followers" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="conferencia" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="estadio" Type="System.String" DbType="VarChar(26)" CanBeNull="true" />
+      <Column Name="entrenador" Type="System.String" DbType="VarChar(29)" CanBeNull="true" />
+      <Column Name="ubicacion" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="fundacion" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="activo" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="GStars" Type="System.Decimal" DbType="Decimal(3,1)" CanBeNull="true" />
+      <Column Name="TWstars" Type="System.Decimal" DbType="Decimal(3,1)" CanBeNull="true" />
+      <Association Name="Equipo_Jugadores" Member="Jugadores" ThisKey="ht" OtherKey="equipo" Type="Jugadores" />
+      <Association Name="Equipo_Estadistica" Member="Estadisticas" ThisKey="ht" OtherKey="equipo" Type="Estadistica" />
+      <Association Name="Equipo_Calendario" Member="Calendarios" ThisKey="ht" OtherKey="local" Type="Calendario" />
+      <Association Name="Equipo_Calendario1" Member="Calendarios1" ThisKey="ht" OtherKey="visita" Type="Calendario" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Estadisticas" Member="Estadisticas">
+    <Type Name="Estadistica">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="temporada" Type="System.String" DbType="VarChar(9)" CanBeNull="true" />
+      <Column Name="equipo" Type="System.String" DbType="VarChar(9)" CanBeNull="true" />
+      <Column Name="jugador" Type="System.String" DbType="VarChar(24)" CanBeNull="true" />
+      <Column Name="partidas" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="puntos" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="rebotes" Type="System.Decimal" DbType="Decimal(2,1)" CanBeNull="true" />
+      <Column Name="pgoldecampo" Type="System.Decimal" DbType="Decimal(2,1)" CanBeNull="true" />
+      <Column Name="pgolcampo" Type="System.Decimal" DbType="Decimal(4,2)" CanBeNull="true" />
+      <Column Name="ptirolibre" Type="System.Decimal" DbType="Decimal(4,2)" CanBeNull="true" />
+      <Column Name="asistencias" Type="System.Decimal" DbType="Decimal(2,1)" CanBeNull="true" />
+      <Column Name="robos" Type="System.Decimal" DbType="Decimal(2,1)" CanBeNull="true" />
+      <Column Name="bloqueos" Type="System.Decimal" DbType="Decimal(2,1)" CanBeNull="true" />
+      <Association Name="Equipo_Estadistica" Member="Equipo1" ThisKey="equipo" OtherKey="ht" Type="Equipo" IsForeignKey="true" />
+      <Association Name="Jugadores_Estadistica" Member="Jugadores" ThisKey="jugador" OtherKey="nombre" Type="Jugadores" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Narraciones" Member="Narraciones">
+    <Type Name="Narracione">
+      <Column Name="idJuego" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="admin" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="comment" Type="System.String" DbType="VarChar(39)" CanBeNull="true" />
+      <Column Name="twitter" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Association Name="Usuario_Narracione" Member="Usuario" ThisKey="admin" OtherKey="nombre_usuario" Type="Usuario" IsForeignKey="true" />
+      <Association Name="Calendario_Narracione" Member="Calendario" ThisKey="idJuego" OtherKey="id" Type="Calendario" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Calendario" Member="Calendarios">
+    <Type Name="Calendario">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="temporada" Type="System.String" DbType="VarChar(9)" CanBeNull="true" />
+      <Column Name="fecha" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="local" Type="System.String" DbType="VarChar(9)" CanBeNull="true" />
+      <Column Name="visita" Type="System.String" DbType="VarChar(9)" CanBeNull="true" />
+      <Column Name="pts_local" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="pts_visita" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="W" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="L" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="finalizado" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Association Name="Calendario_Narracione" Member="Narraciones" ThisKey="id" OtherKey="idJuego" Type="Narracione" />
+      <Association Name="Equipo_Calendario" Member="Equipo" ThisKey="local" OtherKey="ht" Type="Equipo" IsForeignKey="true" />
+      <Association Name="Equipo_Calendario1" Member="Equipo1" ThisKey="visita" OtherKey="ht" Type="Equipo" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

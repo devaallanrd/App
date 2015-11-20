@@ -1,0 +1,7 @@
+c:\Users\aallanrd\documents\visual studio 2013\Projects\App\Presentacion\bin\Release\Presentacion.dll
+c:\Users\aallanrd\documents\visual studio 2013\Projects\App\Presentacion\bin\Release\Presentacion.pdb
+c:\Users\aallanrd\documents\visual studio 2013\Projects\App\Presentacion\bin\Release\Modelo.dll
+c:\Users\aallanrd\documents\visual studio 2013\Projects\App\Presentacion\bin\Release\Modelo.pdb
+c:\Users\aallanrd\documents\visual studio 2013\Projects\App\Presentacion\obj\Release\Presentacion.csprojResolveAssemblyReference.cache
+c:\Users\aallanrd\documents\visual studio 2013\Projects\App\Presentacion\obj\Release\Presentacion.dll
+c:\Users\aallanrd\documents\visual studio 2013\Projects\App\Presentacion\obj\Release\Presentacion.pdb

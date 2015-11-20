@@ -1,0 +1,4 @@
+C:\Users\aallanrd\Documents\Visual Studio 2013\Projects\App\Modelo\bin\Debug\Modelo.dll
+C:\Users\aallanrd\Documents\Visual Studio 2013\Projects\App\Modelo\bin\Debug\Modelo.pdb
+C:\Users\aallanrd\Documents\Visual Studio 2013\Projects\App\Modelo\obj\Debug\Modelo.dll
+C:\Users\aallanrd\Documents\Visual Studio 2013\Projects\App\Modelo\obj\Debug\Modelo.pdb
