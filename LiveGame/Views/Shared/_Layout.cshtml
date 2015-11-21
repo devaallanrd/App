@@ -7,7 +7,7 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
-<body onload="GetJugadores()">
+<body onload="GetCalendar()">
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -46,7 +46,23 @@
             alert(JSON.stringify(data));
             $("#jugadores").html(JSON.stringify(data));
         });
-    }
+        }
+
+        function GetEquipos() {
+
+            $.get("/Home/FindAllEquipos/", function (data) {
+                alert(JSON.stringify(data));
+                $("#jugadores").html(JSON.stringify(data));
+            });
+        }
+
+        function GetCalendar() {
+
+            $.get("/Home/FindAllPartidos/", function (data) {
+                alert(JSON.stringify(data));
+                $("#jugadores").html(JSON.stringify(data));
+            });
+        }
 
     </script>
 

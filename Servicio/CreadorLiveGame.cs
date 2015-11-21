@@ -54,8 +54,6 @@ namespace Servicio
         {
             ServicioEquipos servEqu = servicios.getServicioEquipos();
 
-
-
             if (servEqu != null)
             {
                 IList<Modelo.equipos> equipos = servEqu.requestAll();
@@ -76,5 +74,28 @@ namespace Servicio
 
         }
 
+
+        public IList<Modelo.calendario> findAllPartidas()
+        {
+            ServicioCalendario servCal = servicios.getServicioCalendario();
+
+            if (servCal != null)
+            {
+                IList<Modelo.calendario> calendar = servCal.requestAll();
+
+                if (calendar == null)
+                {
+                    return null;
+                }
+                else
+                {
+                    return calendar;
+                }
+            }
+            else
+            {
+                return null;
+            }
+        }
     }
 }

@@ -15,7 +15,7 @@ namespace LiveGame.Controllers
         // Provee Acceso a todos los servicios del sistema.
 
 
-        CreadorLiveGame fabrica = new CreadorLiveGame("Allan", "1234");
+        CreadorLiveGame creador = new CreadorLiveGame("Allan", "1234");
 
         public ActionResult Index()
         {
@@ -42,7 +42,7 @@ namespace LiveGame.Controllers
         public JsonResult FindAllJugadores()
         {
 
-            IList<Modelo.jugadores> jugadores = fabrica.findAllJugadores();
+            IList<Modelo.jugadores> jugadores = creador.findAllJugadores();
 
             return new JsonResult
             {
@@ -57,7 +57,7 @@ namespace LiveGame.Controllers
         public JsonResult FindAllEquipos()
         {
 
-            IList<Modelo.equipos> equipos = fabrica.findAllEquipos();
+            IList<Modelo.equipos> equipos = creador.findAllEquipos();
 
             return new JsonResult
             {
@@ -72,7 +72,7 @@ namespace LiveGame.Controllers
         public JsonResult FindAllPartidos()
         {
 
-            IList<Modelo.jugadores> jugadores = fabrica.findAllJugadores();
+            IList<Modelo.jugadores> jugadores = creador.findAllJugadores();
 
             return new JsonResult
             {

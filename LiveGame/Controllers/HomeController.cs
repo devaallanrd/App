@@ -72,11 +72,11 @@ namespace LiveGame.Controllers
         public JsonResult FindAllPartidos()
         {
 
-            IList<Modelo.jugadores> jugadores = fabrica.findAllJugadores();
+            IList<Modelo.calendario> calendar = fabrica.findAllPartidas();
 
             return new JsonResult
             {
-                Data = jugadores,
+                Data = calendar,
                 JsonRequestBehavior = JsonRequestBehavior.AllowGet
             };
 

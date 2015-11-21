@@ -65,6 +65,17 @@ namespace LiveGame.Providers
             }
         }
 
+        public ServicioCalendario getServicioCalendario()
+        {
+            if (clientValidated == true)
+            {
+                return this.servicioCalendario;
+            }
+            else
+            {
+                return null;
+            }
+        }
 
 
       

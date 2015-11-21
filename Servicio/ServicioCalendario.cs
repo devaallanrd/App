@@ -22,9 +22,11 @@ namespace Servicio
             // TODO: Complete member initialization
         }
 
-        public IList<Modelo.calendario> findAll()
+        public IList<Modelo.calendario> requestAll()
         {
             return Irepo.findAll();
         }
+
+      
     }
 }

@@ -18,7 +18,9 @@ namespace Repositorio
                 var partidas = from p in livegameDB.Calendarios //Products = nombre de la tabla de productos
                                select new Modelo.calendario
                                           {
-                                             
+                                             ID = p.id ,
+                                             Temporada = p.temporada,
+
                                           };
                 return partidas.ToList();
             }
