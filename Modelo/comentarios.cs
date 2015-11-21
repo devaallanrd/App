@@ -8,5 +8,10 @@ namespace Modelo
 {
     public class comentarios
     {
+        public int ID { get; set; }
+        public string Nombre { get; set; }
+        public string Cuerpo { get; set; }
+        public string Twitter { get; set; }
+       
     }
 }
