@@ -7,7 +7,7 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
-<body>
+<body onload="GetJugadores()">
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -37,5 +37,18 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+    <script>
+
+   function GetJugadores() {
+
+       $.get("/Home/FindAllJugadores/", function (data) {
+           alert(JSON.stringify(data));
+           $("#jugadores").html(JSON.stringify(data));
+       });
+   }
+
+    
+
+    </script>
 </body>
 </html>

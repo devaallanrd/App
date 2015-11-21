@@ -9,8 +9,8 @@ using System.Web.Mvc;
 
 namespace LiveGame.Controllers
 {
-    public class ControladorGeneral
+    public class ControladorGeneral :Controller
     {
-       public CreadorLiveGame creador = new CreadorLiveGame("Allan", "1234");
+       public static CreadorLiveGame creador = new CreadorLiveGame("jose", "4321");
     }
 }

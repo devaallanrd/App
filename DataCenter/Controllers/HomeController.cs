@@ -8,7 +8,7 @@ namespace DataCenter.Controllers
 {
     public class HomeController : Controller
     {
-        Servicio.CreadorDataCenter datacenter ;
+        Servicio.CreadorDataCenter datacenter = new Servicio.CreadorDataCenter("jose","4321");
         public ActionResult Index()
         {
             ViewBag.Title = "Home Page";

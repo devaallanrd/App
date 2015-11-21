@@ -1,12 +1,13 @@
 ﻿<!DOCTYPE html>
-<html>
+<html ng-app="todoApp">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-    <script type="text/javascript" src="~/Scripts/app.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-beta.2/angular.min.js"></script>
+    <script src="~/Scripts/todo.js"></script>
 </head>
 <body onload="GetCalendar()">
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -17,12 +18,14 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("LiveGame", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, null)</li>
-                    <li>@Html.ActionLink("API", "Index", "Help", new { area = "" }, null)</li>
+                    <li>@Html.ActionLink("Calendario", "Index", "Calendario", new { area = "" }, null)</li>
+                    <li>@Html.ActionLink("Admin", "Index", "Admin", new { area = "" }, null)</li>
+
                 </ul>
             </div>
         </div>
@@ -37,36 +40,39 @@
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
-  
+
     @RenderSection("scripts", required: false)
 
-   <script>
+    <script>
 
-       function GetJugadores() {
+        function GetJugadores() {
 
-           $.get("/Jugadores/FindAllJugadores/", function (data) {
-               alert(JSON.stringify(data));
-               $("#jugadores").html(JSON.stringify(data));
-           });
-       }
+            $.get("/Jugadores/FindAllJugadores/", function (data) {
 
-       function GetEquipos() {
+                $("#jugadores").html(JSON.stringify(data));
+            });
+        }
 
-           $.get("/Equipos/FindAllEquipos/", function (data) {
-               alert(JSON.stringify(data));
-               $("#jugadores").html(JSON.stringify(data));
-           });
-       }
+        function GetEquipos() {
 
-       function GetCalendar() {
-           alert('call calendar')
-           $.get("/Calendario/FindAllPartidos/", function (data) {
-               alert(JSON.stringify(data));
-               $("#jugadores").html(JSON.stringify(data));
-           });
-       }
+            $.get("/Equipos/FindAllEquipos/", function (data) {
 
-   </script>
+                $("#jugadores").html(JSON.stringify(data));
+            });
+        }
+
+        function GetCalendar() {
+
+            $.get("/Calendario/FindAllPartidos/", function (data) {
+
+                $("#calendario").html(JSON.stringify(data));
+            });
+        }
+
+    </script>
 
 </body>
 </html>
+
+
+

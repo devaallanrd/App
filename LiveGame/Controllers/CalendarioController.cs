@@ -11,6 +11,12 @@ namespace LiveGame.Controllers
 {
     public class CalendarioController : ControladorGeneral
     {
+        public ActionResult Index()
+        {
+            ViewBag.Title = "Calendar Page";
+
+            return View();
+        }
         // Centralizacion de los servicios 
         // Provee Acceso a todos los servicios del sistema.
 

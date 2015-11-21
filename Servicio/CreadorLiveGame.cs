@@ -23,7 +23,10 @@ namespace Servicio
             servicios   = new ProveedorServicios(name, pass);
 
         }
-    
+        
+       //Esta es la parte del View Model / Request and Response
+       //De las listas
+
         public IList<Modelo.jugadores> findAllJugadores( )
         {
             ServicioJugadores servJug = servicios.getServicioJugadores();
