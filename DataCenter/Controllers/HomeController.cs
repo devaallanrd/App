@@ -8,7 +8,7 @@ namespace DataCenter.Controllers
 {
     public class HomeController : Controller
     {
-        Servicio.FabricaDataCenter fabrica ;
+        Servicio.CreadorDataCenter fabrica ;
         public ActionResult Index()
         {
             ViewBag.Title = "Home Page";

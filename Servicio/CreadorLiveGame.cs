@@ -12,12 +12,12 @@ namespace Servicio
     //Pero necesitan las credenciales de alguien registrado
     //asi que primero vamos a por ellos.
 
-   public class FabricaLiveGame
+   public class CreadorLiveGame
     {
        // Una instancia para el proveedor de servicios.
         ProveedorServicios servicios;
 
-        public FabricaLiveGame(String name, String pass)
+        public CreadorLiveGame(String name, String pass)
         {
             //Solicitamos crear la instancia con un nombre y contraseña
             servicios   = new ProveedorServicios(name, pass);

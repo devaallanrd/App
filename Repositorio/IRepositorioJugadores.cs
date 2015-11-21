@@ -10,5 +10,9 @@ namespace Repositorio
     public interface IRepositorioJugadores
     {
          IList<Modelo.jugadores> findAll();
+
+        //Jugador Especifico
+
+        //Jugadores por equipo
     }
 }

@@ -9,5 +9,11 @@ namespace Repositorio
     public interface IRepositorioEquipos
     {
         IList<Modelo.equipos> findAll();
+
+        //Agregar Equipo
+
+        //Remover un Equipo
+
+        //Modificar Equipo
     }
 }

@@ -9,5 +9,13 @@ namespace Repositorio
     public interface IRepositorioCalendario
     {
         IList<Modelo.calendario> findAll();
+
+        //Encontrar partido por ID
+
+        //Lista partido fecha especifica
+
+        //Agregar Comentario a una partida
+
+        //Agregar 
     }
 }

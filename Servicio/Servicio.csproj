@@ -39,8 +39,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FabricaDataCenter.cs" />
-    <Compile Include="FabricaLiveGame.cs" />
+    <Compile Include="CreadorDataCenter.cs" />
+    <Compile Include="CreadorLiveGame.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProveedorServicios.cs" />
     <Compile Include="ServicioCalendario.cs" />

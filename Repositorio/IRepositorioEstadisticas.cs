@@ -10,5 +10,9 @@ namespace Repositorio
     {
          IList<Modelo.estadistica> findAll();
        
+        //Buscar Estadistica para JugadorX
+
+
+        //Estadistica Jugador X Partido X
     }
 }

@@ -9,5 +9,12 @@ namespace Repositorio
     public interface IRepositorioUsuarios
     {
         IList<Modelo.usuarios> findAll();
+
+
+        //Buscar fanaticos
+
+        //Editar fanatico
+
+        //Eliminar Fanatico
     }
 }

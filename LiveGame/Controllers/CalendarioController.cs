@@ -9,17 +9,17 @@ using System.Web.Mvc;
 
 namespace LiveGame.Controllers
 {
-    public class HomeController : Controller
+    public class CalendarioController : Controller
     {
         // Centralizacion de los servicios 
         // Provee Acceso a todos los servicios del sistema.
 
 
         CreadorLiveGame fabrica = new CreadorLiveGame("Allan", "1234");
-  
+
         public ActionResult Index()
         {
-            ViewBag.Title = "Home Page";
+            ViewBag.Title = "Home Calendario Page";
 
             return View();
         }
@@ -35,13 +35,13 @@ namespace LiveGame.Controllers
         {
             ViewBag.Title = "Register Page";
             //Redirect Admin Page or Fan Page 
-           
+
             return View();
         }
 
         public JsonResult FindAllJugadores()
         {
-          
+
             IList<Modelo.jugadores> jugadores = fabrica.findAllJugadores();
 
             return new JsonResult
@@ -56,7 +56,7 @@ namespace LiveGame.Controllers
 
         public JsonResult FindAllEquipos()
         {
-            
+
             IList<Modelo.equipos> equipos = fabrica.findAllEquipos();
 
             return new JsonResult
@@ -85,6 +85,6 @@ namespace LiveGame.Controllers
         }
 
 
-        
+
     }
 }
