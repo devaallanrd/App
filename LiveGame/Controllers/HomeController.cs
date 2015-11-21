@@ -15,7 +15,7 @@ namespace LiveGame.Controllers
         // Provee Acceso a todos los servicios del sistema.
 
 
-        CreadorLiveGame fabrica = new CreadorLiveGame("Allan", "1234");
+        
   
         public ActionResult Index()
         {
@@ -39,50 +39,10 @@ namespace LiveGame.Controllers
             return View();
         }
 
-        public JsonResult FindAllJugadores()
-        {
-          
-            IList<Modelo.jugadores> jugadores = fabrica.findAllJugadores();
+      
 
-            return new JsonResult
-            {
-                Data = jugadores,
-                JsonRequestBehavior = JsonRequestBehavior.AllowGet
-            };
-
-            //return Json(fabrica.findAll("Jugadores"), JsonRequestBehavior.AllowGet);
-
-        }
-
-        public JsonResult FindAllEquipos()
-        {
-            
-            IList<Modelo.equipos> equipos = fabrica.findAllEquipos();
-
-            return new JsonResult
-            {
-                Data = equipos,
-                JsonRequestBehavior = JsonRequestBehavior.AllowGet
-            };
-
-            //return Json(fabrica.findAll("Jugadores"), JsonRequestBehavior.AllowGet);
-
-        }
-
-        public JsonResult FindAllPartidos()
-        {
-
-            IList<Modelo.calendario> calendar = fabrica.findAllPartidas();
-
-            return new JsonResult
-            {
-                Data = calendar,
-                JsonRequestBehavior = JsonRequestBehavior.AllowGet
-            };
-
-            //return Json(fabrica.findAll("Jugadores"), JsonRequestBehavior.AllowGet);
-
-        }
+        
+        
 
 
         

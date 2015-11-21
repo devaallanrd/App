@@ -28,16 +28,22 @@ namespace LiveGame.Providers
 
         public ProveedorServicios(String nombre, String pass)
         {
-            this.clientValidated = true;
             repositorios = new ProveedorRepositorios();
-
-
+           
             servicioUsuarios = new ServicioUsuarios(repositorios.repoUsuarios);
-            servicioEquipos = new ServicioEquipos(repositorios.repoEquipos);        
-            servicioJugadores = new ServicioJugadores(repositorios.repoJugadores);
-            servicioCalendario = new ServicioCalendario(repositorios.repoCalendario);
-            servicioEstadisticas = new ServicioEstadisticas(repositorios.repoEstadisticas);
-      
+
+            if (servicioUsuarios.validate(nombre, pass))
+            {
+                servicioEquipos = new ServicioEquipos(repositorios.repoEquipos);
+                servicioJugadores = new ServicioJugadores(repositorios.repoJugadores);
+                servicioCalendario = new ServicioCalendario(repositorios.repoCalendario);
+                servicioEstadisticas = new ServicioEstadisticas(repositorios.repoEstadisticas);
+                this.clientValidated = true;
+            }
+            else
+            {
+                this.clientValidated = false;
+            }
         }
 
 

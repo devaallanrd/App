@@ -10,6 +10,7 @@ namespace Repositorio
     {
         IList<Modelo.usuarios> findAll();
 
+        bool validate(string name, string pass);
 
         //Buscar fanaticos
 

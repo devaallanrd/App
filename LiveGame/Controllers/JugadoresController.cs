@@ -9,26 +9,23 @@ using System.Web.Mvc;
 
 namespace LiveGame.Controllers
 {
-    public class CalendarioController : ControladorGeneral
+    public class JugadoresController : ControladorGeneral
     {
-        // Centralizacion de los servicios 
-        // Provee Acceso a todos los servicios del sistema.
 
-        public JsonResult FindAllPartidos()
+
+        public JsonResult FindAllJugadores()
         {
 
-            IList<Modelo.calendario> calendar = creador.findAllPartidas();
+            IList<Modelo.jugadores> jugadores = creador.findAllJugadores();
 
             return new JsonResult
             {
-                Data = calendar,
+                Data = jugadores,
                 JsonRequestBehavior = JsonRequestBehavior.AllowGet
             };
 
             //return Json(fabrica.findAll("Jugadores"), JsonRequestBehavior.AllowGet);
 
         }
-
-
     }
 }

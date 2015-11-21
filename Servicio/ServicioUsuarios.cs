@@ -25,5 +25,11 @@ namespace Servicio
         {
             return Irepo.findAll();
         }
+
+        public bool validate(String nombre, String pass)
+        {
+            return Irepo.validate(nombre,pass);
+        }
+
     }
 }

@@ -20,7 +20,7 @@ namespace Repositorio
                                           {
                                              ID = p.id ,
                                              Temporada = p.temporada,
-
+                                             
                                           };
                 return partidas.ToList();
             }

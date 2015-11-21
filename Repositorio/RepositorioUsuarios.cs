@@ -29,5 +29,18 @@ namespace Repositorio
 
             return usuarios.ToList();
         }
+
+        public bool validate(string name, string pass)
+        {
+            bool ret = false;
+            IList<Modelo.usuarios> all = findAll();
+            foreach (Modelo.usuarios u in all){
+                if ((u.nombre_usuario == name)&&(u.Contrasena==pass))
+                {
+                    return true;
+                }
+            }
+            return ret;
+        }
     }
 }

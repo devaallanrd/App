@@ -8,12 +8,29 @@ namespace DataCenter.Controllers
 {
     public class HomeController : Controller
     {
-        Servicio.CreadorDataCenter fabrica ;
+        Servicio.CreadorDataCenter datacenter ;
         public ActionResult Index()
         {
             ViewBag.Title = "Home Page";
-
+            
             return View();
         }
+
+        public JsonResult FindAllJugadores()
+        {
+
+            IList<Modelo.jugadores> jugadores = datacenter.findAllJugadores();
+
+            return new JsonResult
+            {
+                Data = jugadores,
+                JsonRequestBehavior = JsonRequestBehavior.AllowGet
+            };
+
+            //return Json(fabrica.findAll("Jugadores"), JsonRequestBehavior.AllowGet);
+
+        }
+
+
     }
 }
