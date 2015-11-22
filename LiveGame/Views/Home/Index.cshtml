@@ -4,31 +4,29 @@
         <label>Name:</label>
         <input type="text" ng-model="yourName" placeholder="Enter a name here">
         <hr>
-        <h1>Hello {{yourName}}!</h1>
-    </div>
-
-    <pre id="jugadores">
     
         
-    </pre>
+    </div>
+
+    <div id="jugadores">
+      
+        
+    </div>
     <h1 id="title"></h1>
     <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
     <p><a href="" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
 </div>
 <div class="row">
     <div ng-controller="TodoListController as todoList">
-        <span>{{todoList.remaining()}} of {{todoList.todos.length}} remaining</span>
-        [ <a href="" ng-click="todoList.archive()">archive</a> ]
-        <ul class="unstyled">
-            <li ng-repeat="todo in todoList.todos">
-                <input type="checkbox" ng-model="todo.done">
-                <span class="done-{{todo.done}}">{{todo.text}}</span>
-            </li>
-        </ul>
-        <form ng-submit="todoList.addTodo()">
-            <input type="text" ng-model="todoList.todoText" size="30"
-                   placeholder="add new todo here">
-            <input class="btn-primary" type="submit" value="add">
-        </form>
+
+       Somethinh here 
+        <div ng-init="jugadores.todos" ng-repeat="jugadores in todoList">
+            {{jugadores +'//'}}
+            <div ng-repeat="jugador in jugadores.todos">
+                {{jugador +'//'}}
+            </div>
+
+        </div>
+      
     </div>
 </div>

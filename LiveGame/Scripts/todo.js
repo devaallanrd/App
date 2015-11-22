@@ -1,6 +1,18 @@
 ﻿angular.module('todoApp', [])
-  .controller('TodoListController', function () {
+
+
+    .controller('MyController', ['$scope', function($scope) {
+        $scope.username = 'World';
+
+        $scope.sayHello = function() {
+            $scope.greeting = 'Hello ' + $scope.username + '!';
+        };
+    }])
+    .controller('TodoListController', ['$scope', function($scope) {
+  //.controller('TodoListController', function () {
+
       var todoList = this;
+
 
       $.get("/Jugadores/FindAllJugadores/", function (data) {
           alert(JSON.stringify(data));
@@ -32,4 +44,4 @@
               if (!todo.done) todoList.todos.push(todo);
           });
       };
-  });
+  }]);
